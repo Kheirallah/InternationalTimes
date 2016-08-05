@@ -2,7 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-public class internationalDates
+public class internationalTimes
 {
 
 public static void main(String argv[])
@@ -13,24 +13,26 @@ Calendar cal = Calendar.getInstance();
 //Default time zone is America/New_York
 TimeZone time = TimeZone.getDefault();
 
+System.out.println("Time zone:            City:             Time:");
+
 //Prints out the time and timezone in Washington DC
 SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
 
-if (cal.get(Calendar.AM_PM) == 0)
-System.out.println("The time in Washington DC is: " + sdf.format(cal.getTime()) + " AM");
-else
-System.out.println("The time in Washington DC is: " + sdf.format(cal.getTime()) + " PM");
-
 System.out.println();
+
+if (cal.get(Calendar.AM_PM) == 0)
+System.out.println(time.getID() + "      " + "Washington DC     " + sdf.format(cal.getTime()) + " AM");
+else
+System.out.println(time.getID() + "      " + "Washington DC     " + sdf.format(cal.getTime()) + " PM");
 
 //Prints out the time in Los Angeles
 time = TimeZone.getTimeZone("America/Los_Angeles");
 sdf.setTimeZone(time);
 
 if (cal.get(Calendar.AM_PM) == 0)
-System.out.println("The time in Los Angeles is: " + sdf.format(cal.getTime()) + " AM");
+System.out.println(time.getID() + "   " + "Los Angeles       " + sdf.format(cal.getTime()) + " AM");
 else
-System.out.println("The time in Los Angeles is: " + sdf.format(cal.getTime()) + " PM");
+System.out.println(time.getID() + "   " + "Los Angeles       " + sdf.format(cal.getTime()) + " PM");
 
 System.out.println();
 
