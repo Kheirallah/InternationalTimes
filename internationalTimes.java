@@ -34,8 +34,6 @@ System.out.println(time.getID() + "   " + "Los Angeles       " + sdf.format(cal.
 else
 System.out.println(time.getID() + "   " + "Los Angeles       " + sdf.format(cal.getTime()) + " PM");
 
-System.out.println();
-
 //Prints out the time in Amsterdam
 time = TimeZone.getTimeZone("Europe/Amsterdam");
 sdf.setTimeZone(time);
