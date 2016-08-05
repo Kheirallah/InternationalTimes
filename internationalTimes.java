@@ -38,7 +38,7 @@ public class internationalTimes
    time = TimeZone.getTimeZone("Europe/Amsterdam");
    sdf.setTimeZone(time);
 
-      if (cal.get(Calendar.AM_PM) == 1)
+      if (cal.get(Calendar.AM_PM) == 0)
          System.out.println(time.getID() + "   " + "   Amsterdam         " + sdf.format(cal.getTime()) + " AM");
       else
          System.out.println(time.getID() + "   " + "   Amsterdam         " + sdf.format(cal.getTime()) + " PM");
@@ -47,7 +47,7 @@ public class internationalTimes
    time = TimeZone.getTimeZone("Asia/Jerusalem");
    sdf.setTimeZone(time);
 
-      if (cal.get(Calendar.AM_PM) == 1)
+      if (cal.get(Calendar.AM_PM) == 0)
          System.out.println(time.getID() + "   " + "     Jerusalem         " + sdf.format(cal.getTime()) + " AM");
       else
          System.out.println(time.getID() + "   " + "     Jerusalem         " + sdf.format(cal.getTime()) + " PM");
@@ -56,7 +56,7 @@ public class internationalTimes
    time = TimeZone.getTimeZone("Asia/Hong_Kong");
    sdf.setTimeZone(time);
    
-      if (cal.get(Calendar.AM_PM) == 1)
+      if (cal.get(Calendar.AM_PM) == 0)
          System.out.println(time.getID() + "   " + "     Hong Kong         " + sdf.format(cal.getTime()) + " AM");
       else
          System.out.println(time.getID() + "   " + "     Hong Kong         " + sdf.format(cal.getTime()) + " PM");
